@@ -1,1 +1,3 @@
-A simple command-line application.
+# Advent of Code 2021
+
+Made in Dart
