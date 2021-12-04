@@ -53,10 +53,6 @@ extension ListIntExtension on List<int> {
     return reduce((value, element) => value - element);
   }
 
-  int sum() {
-    return reduce((value, element) => value + element);
-  }
-
   int getIncrementsCount() {
     return chunk_every(2, step: 1).map((chunk) => chunk.diff()).where((item) => item < 0).length;
   }

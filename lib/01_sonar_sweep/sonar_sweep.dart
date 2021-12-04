@@ -1,5 +1,6 @@
 import 'package:adventofcode2021/day_problem.dart';
 import 'package:adventofcode2021/tools/lists.dart';
+import 'package:collection/src/iterable_extensions.dart';
 
 class Day01 extends DayProblemSolver<int, int> {
   Day01(DayProblemMode mode) : super(mode: mode, day: '01', name: 'sonar_sweep');
@@ -11,7 +12,7 @@ class Day01 extends DayProblemSolver<int, int> {
 
   @override
   Future<int> solvePart2() async {
-    return input.asInts().chunk_every(3, step: 1).map((chunk) => chunk.sum()).toList().getIncrementsCount();
+    return input.asInts().chunk_every(3, step: 1).map((chunk) => chunk.sum).toList().getIncrementsCount();
   }
 }
 
