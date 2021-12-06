@@ -56,6 +56,10 @@ extension ListIntExtension on List<int> {
   int getIncrementsCount() {
     return chunk_every(2, step: 1).map((chunk) => chunk.diff()).where((item) => item < 0).length;
   }
+
+  int max() {
+    return reduce((value, element) => value > element ? value : element);
+  }
 }
 
 extension ListStringExtension on List<String> {
