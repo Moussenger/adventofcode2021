@@ -7,3 +7,11 @@ extension StringNumberParserExt on String {
     return split('').map((digit) => digit == '0' ? '1' : '0').join();
   }
 }
+
+extension IntExt on int {
+  int sequenceSum() {
+    if (this == 0) return 0;
+
+    return this * (1 + this) ~/ 2;
+  }
+}
