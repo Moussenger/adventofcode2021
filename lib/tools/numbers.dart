@@ -14,4 +14,8 @@ extension IntExt on int {
 
     return this * (1 + this) ~/ 2;
   }
+
+  List<int> coord(int xLength) {
+    return [this ~/ xLength, this % xLength];
+  }
 }
